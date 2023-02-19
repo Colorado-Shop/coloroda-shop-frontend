@@ -1,0 +1,93 @@
+<!-- Page info -->
+<div class="page-top-info">
+  <div class="container">
+    <h4>Your cart</h4>
+    <div class="site-pagination">
+      <a href="">Home</a> /
+      <a href="">Your cart</a>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+
+<!-- cart section end -->
+<section class="cart-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cart-table">
+          <h3>Your Cart <span *ngIf="items.length < 1">Is Empty!!!</span></h3>
+          <div class="cart-table-warp">
+            <table>
+              <thead>
+                <tr>
+                  <th class="product-th">Product</th>
+                  <th class="size-th">Price</th>
+                  <th class="quy-th">Quantity</th>
+                  <th class="total-th">Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of items">
+                  <td class="product-col">
+                    <img src={{item.product.photo}} alt="{{item.product.name}}">
+                    <div class="pc-title">
+                      <h4>{{item.product.name}}</h4>
+                      <p>{{itemTotal(item)}}</p>
+                    </div>
+                  </td>
+                  <td class="size-col">
+                    <div>
+                      <div>
+                        {{printPrices(item)}}
+                      </div>
+                    </div>
+                  </td>
+                  <td class="size-col">
+                    <h4>{{printQuantity(item)}}</h4>
+                  </td>
+                  <td class="total-col">
+                    <button (click)="delete(item)" class="btn btn-primary">X</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="total-cost">
+            <a href="/products" class="site-btn sb-dark">Continue shopping</a>
+            <a href="/checkout" class="site-btn">Proceed to checkout</a>
+            <button class="site-btn sb-dark" (click)="clearCart()">Clear Your Cart</button>
+            <a class="text-white" style="padding-left: 50px;">Total <span>${{total()}}</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- cart section end -->
+
+<!-- RELATED PRODUCTS section -->
+<!-- <section class="related-product-section">
+	<div class="container">
+		<div class="section-title">
+			<h2>PRODUCTS YOU MAY LIKE</h2>
+		</div>
+		<div class="product-slider owl-carousel">
+			<div class="product-item" *ngFor="let product of products">
+				<div class="pi-pic">
+					<img src={{product.photo}} alt={{product.name}}>
+					<div class="pi-links">
+						<a href="../../../../product/{{product.id}}" class="add-card"><i
+								class="flaticon-bag"></i><span>View Options</span></a>
+					</div>
+				</div>
+				<div class="pi-text">
+					<h6>${{product.prices[0].amount}}</h6>
+					<p>{{product.name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+<!-- RELATED PRODUCTS section end -->

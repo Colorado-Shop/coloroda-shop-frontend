@@ -1,0 +1,60 @@
+<!-- Page info -->
+<div class="page-top-info">
+  <div class="container">
+    <h4>Login</h4>
+    <div class="site-pagination">
+      <a>Dashboard</a> /
+      <a>login</a>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+<mat-card>
+  <!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#8fc424" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+  </ngx-spinner>
+  <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+    <mat-form-field appearance="fill">
+      <mat-label>E-Mail</mat-label>
+      <input matInput name="email" ngModel type="email" placeholder="abc@example.com" #emailInput="ngModel" required
+        email>
+      <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" name="password" [type]="hide ? 'password' : 'text'" ngModel matInput placeholder="*******"
+        #passwordInput="ngModel" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="passwordInput.invalid">Please enter a password.</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" style="background-color: #8fc424; color: white;"
+      type="submit">LOGIN</button>
+  </form>
+</mat-card><br>
+<!--
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+  <h3>Login Here</h3>
+
+  <label for="username">Username</label>
+  <input type="text" placeholder="Email" id="username" name="username" ngModel required email #email="ngModel">
+  <mat-error *ngIf="email.invalid">Please enter a valid email.</mat-error>
+
+  <label for="password">Password</label>
+  <input type="password" placeholder="Password" id="password" name="password" ngModel required #password="ngModel">
+  <mat-error *ngIf="password.invalid">Incorrect password.</mat-error>
+
+  <button type="submit">Log In</button>
+  <div class="social">
+    <div class="go"><i class="fab fa-google"></i> Google</div>
+    <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+  </div>
+</form> -->

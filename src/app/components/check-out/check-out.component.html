@@ -1,0 +1,412 @@
+<!-- <div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_6.png');">
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-0 bread">Checkout</h1>
+        <p class="breadcrumbs"><span class="mr-2"><a href="../">Home</a></span> <span>Checkout</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-8 ftco-animate">
+        <form #checkoutForm="ngForm" (ngSubmit)="submit()" class="billing-form bg-light p-3 p-md-5">
+          <h3 class="mb-4 billing-heading">Billing Details</h3>
+          <div class="row align-items-end">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="firstname">Firt Name</label>
+                <input type="text" class="form-control" placeholder="" name="firstName" [(ngModel)]="shipping.firstName" required="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" placeholder="" name="lastName" [(ngModel)]="shipping.lastName" required="true">
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="country">State / Country</label>
+                <div class="select-wrap">
+                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                  <select [(ngModel)]="shipping.country" name="country" class="form-control" required="true">
+                    <option *ngFor="let country of countryList" [value]="country">{{country}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="towncity">State / Province / Region</label>
+                <input type="text" class="form-control" placeholder="" name="state" [(ngModel)]="shipping.state" required="true">
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="towncity">Town / City</label>
+                <input type="text" class="form-control" placeholder="" name="city" [(ngModel)]="shipping.city" required="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="postcodezip">Postcode / ZIP *</label>
+                <input type="text" class="form-control" placeholder="" name="zip" [(ngModel)]="shipping.zip" required="true">
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="streetaddress">Street Address</label>
+                <input type="text" class="form-control" placeholder="House number and street name" name="address1" [(ngModel)]="shipping.address1" required="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)" name="address2"  [(ngModel)]="shipping.address2">
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="emailaddress">Email Address</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="note">Message</label>
+                <textarea class="form-control" placeholder="Message" name="msg" [(ngModel)]="shipping.notes"></textarea>
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payment">Select Payment Method</label>
+                <div class="radio">
+                  <label><input type="radio" name="payment" class="mr-2" [(ngModel)]="shipping.paymentOption" value="Bitcoin" id="one">Bitcoin</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="payment" class="mr-2" [(ngModel)]="shipping.paymentOption" value="Cashapp" id="two">Cashapp</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="payment" class="mr-2" [(ngModel)]="shipping.paymentOption" value="Paypal" id="three">Paypal</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="payment" class="mr-2" [(ngModel)]="shipping.paymentOption" value="Western Union" id="four">Western Union</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 align-items-end">
+              <div class="form-group">
+                <label for="payment">Select Contact Method</label>
+                <div class="radio">
+                  <label><input type="radio" name="optradio" class="mr-2" [(ngModel)]="shipping.contactOption" value="Phone" id="con-1">Phone</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio" class="mr-2" [(ngModel)]="shipping.contactOption" value="Email" id="con-2">Email</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio" class="mr-2" [(ngModel)]="shipping.contactOption" value="Telegram" id="con-3">Telegram</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio" class="mr-2" [(ngModel)]="shipping.contactOption" value="Whatsapp" id="con-4">Whatsapp</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <button href="#" class="btn btn-primary py-3 px-4" [disabled]="!checkoutForm.valid || isLoading" type="submit">{{buttonMsg}}</button>
+            </div>
+          </div>
+        </form>
+
+
+
+        <div class="row mt-5 pt-3 d-flex">
+          <div class="col-md-6 d-flex">
+            <div class="cart-detail cart-total bg-light p-3 p-md-4">
+              <h3 class="billing-heading mb-4">Cart Total</h3>
+              <p class="d-flex">
+                <span>Subtotal</span>
+                <span>${{total()}}</span>
+              </p>
+              <p class="d-flex">
+                <span>Delivery</span>
+                <span>$50.00</span>
+              </p>
+              <p class="d-flex">
+                <span>Discount</span>
+                <span>$0.00</span>
+              </p>
+              <hr>
+              <p class="d-flex total-price">
+                <span>Total</span>
+                <span>${{total()--50.00}}</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="cart-detail cart-total bg-light p-3 p-md-4">
+              <h3 class="billing-heading mb-4">Cart Itrms</h3>
+              <p class="d-flex total-price" *ngFor="let item of items">
+                <span>{{item.product.name}}</span>
+                <span>${{itemTotal(item)}}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Page info -->
+<div class="page-top-info">
+  <div class="container">
+    <h4>Checkout</h4>
+    <div class="site-pagination">
+      <a href="">Home</a> /
+      <a href="">Checkout</a>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+
+<!-- checkout section  -->
+<section class="checkout-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-2 order-lg-1">
+        <form class="checkout-form contact-form" #checkoutForm="ngForm" (ngSubmit)="submit()">
+          <div class="cf-title">Billing Address. Fill all the fields</div>
+          <div class="row">
+            <div class="col-md-7">
+              <p>*Billing Information. Please fill the form correctly. Optional fields are marked as optional</p>
+            </div>
+          </div>
+          <div class="row address-inputs">
+            <div class="col-md-6">
+              <input type="text" placeholder="First name" name="firstName" [(ngModel)]="shipping.firstName"
+                required="true">
+            </div>
+            <div class="col-md-6">
+              <input type="text" placeholder="Last name" name="lastName" [(ngModel)]="shipping.lastName"
+                required="true">
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" placeholder="Phone" name="ohone" [(ngModel)]="shipping.phone" required="true">
+            </div>
+            <div class="col-md-6">
+              <input type="text" placeholder="Email" name="email" [(ngModel)]="shipping.email" required="true">
+            </div>
+            <div class="col-md-12">
+              <input type="text" placeholder="Country" name="country" [(ngModel)]="shipping.country" required="true">
+              <input type="text" placeholder="State / Province / Region" name="state" [(ngModel)]="shipping.state"
+                required="true">
+              <input type="text" placeholder="City" name="city" [(ngModel)]="shipping.city" required="true">
+              <input type="text" placeholder="Zip code" name="zip" [(ngModel)]="shipping.zip" required="true">
+            </div>
+            <div class="col-md-6">
+              <input type="text" placeholder="Address" name="address1" [(ngModel)]="shipping.address1" required="true">
+            </div>
+            <div class="col-md-6">
+              <input type="text" placeholder="Address line 2 (Optional)" name="address2"
+                [(ngModel)]="shipping.address2">
+            </div>
+            <div class="col-md-12">
+              <textarea placeholder="Message (Optional)" name="message" [(ngModel)]="shipping.notes"></textarea>
+            </div>
+          </div>
+          <div class="cf-title">Select Payment Method</div>
+          <div class="row shipping-btns">
+            <div class="col-6">
+              <h4>Bitcoin</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-1" [(ngModel)]="shipping.paymentOption" value="Bitcoin">
+                  <label for="ship-1">Bitcoin</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Zelle</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-6" [(ngModel)]="shipping.paymentOption" value="Zelle">
+                  <label for="ship-6">Zelle</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Venmo</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-7" [(ngModel)]="shipping.paymentOption" value="Venmo">
+                  <label for="ship-7">Venmo</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Paypal</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-8" [(ngModel)]="shipping.paymentOption" value="Paypal">
+                  <label for="ship-8">Paypal</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Cashapp</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-2" [(ngModel)]="shipping.paymentOption" value="Cashapp">
+                  <label for="ship-2">Cashapp</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Moneygram</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-3" [(ngModel)]="shipping.paymentOption"
+                    value="Moneygram">
+                  <label for="ship-3">Moneygram</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Western Union</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="shipping" id="ship-4" [(ngModel)]="shipping.paymentOption"
+                    value="Western Union">
+                  <label for="ship-4">Western Union</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cf-title">How can we contact you</div>
+          <div class="row shipping-btns">
+            <div class="col-6">
+              <h4>Email</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="contact-method" id="contact-1" [(ngModel)]="shipping.contactOption"
+                    value="Email">
+                  <label for="contact-1">Email</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Phone</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="contact-method" id="contact-2" [(ngModel)]="shipping.contactOption"
+                    value="Phone">
+                  <label for="contact-2">Phone</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Telegram</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="contact-method" id="contact-3" [(ngModel)]="shipping.contactOption"
+                    value="Telegram">
+                  <label for="contact-3">Telegram</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4>Whatsapp</h4>
+            </div>
+            <div class="col-6">
+              <div class="cf-radio-btns">
+                <div class="cfr-item">
+                  <input type="radio" name="contact-method" id="contact-4" [(ngModel)]="shipping.contactOption"
+                    value="Whatsapp">
+                  <label for="contact-4">Whatsapp</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="site-btn submit-order-btn" type="submit"
+            [disabled]="!checkoutForm.valid || isLoading">{{buttonMsg}}</button>
+        </form><br>
+        <button class="site-btn submit-order-btn sb-dark" (click)="clearCart()">Clear Your Cart</button>
+      </div>
+      <div class="col-lg-4 order-1 order-lg-2">
+        <div class="checkout-cart">
+          <h3>Your Cart <span *ngIf="items.length < 1">Is Empty!!!</span></h3>
+          <ul class="product-list">
+            <li *ngFor="let item of items">
+              <div class="pl-thumb"><img src={{item.product.photo}} alt=""></div>
+              <h6>{{item.product.name}}</h6>
+              <p>${{itemTotal(item)}}</p>
+            </li>
+          </ul>
+          <ul class="price-list">
+            <li class="total">Total<span>${{total()}}</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- checkout section end -->
+
+<!-- Snap Pixel Code -->
+<script type='text/javascript'>
+  (function (e, t, n) {
+    if (e.snaptr) return; var a = e.snaptr = function () { a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments) };
+    a.queue = []; var s = 'script'; r = t.createElement(s); r.async = !0;
+    r.src = n; var u = t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r, u);
+  })(window, document,
+    'https://sc-static.net/scevent.min.js');
+
+  snaptr('init', 'b2ea7af3-4717-4163-924a-820c134d711b', {
+    'Phone_Number': '_hello_USER_EMAIL_'
+  });
+
+  snaptr('track', 'PAGE_VIEW');
+
+</script>
+<!-- End Snap Pixel Code -->

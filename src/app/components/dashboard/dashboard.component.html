@@ -1,0 +1,58 @@
+<!-- Page info -->
+<div class="page-top-info">
+  <div class="container">
+    <h4>Available Products </h4>
+    <div class="site-pagination">
+      <a href="/">Go To Client View</a> /
+      <a>Edit Products</a>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+<!-- Category section -->
+<section class="category-section spad">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 text-center">
+      <a routerLink="../dashboard/new-product" class="btn btn-secondary ">Add New Product</a>
+    </div>
+  </div>
+  <br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="row" *ngIf="products.length == 0">
+          <div class="col-lg-10 offset-lg-1 text-center">
+            <p style="font-size: 14;">
+              No products found, please add some products
+            </p>
+          </div>
+        </div>
+        <div class="row" *ngIf="products.length > 0">
+          <div class="col-lg-3 col-sm-6" *ngFor="let product of products">
+            <div class="product-item">
+              <div class="pi-pic">
+                <a href="../../../product/{{product.id}}"><img src={{product.photo}} alt={{product.name}}></a>
+
+              </div>
+              <div class="pi-text">
+                <h4>{{product.name}}</h4>
+                <h6><button class="btn btn-danger" (click)="onDelete(product)">Delete</button> <br>
+                </h6>
+                <p><a class="btn btn-info" [routerLink]="['edit-product/', product.id]">Edit</a></p>
+              </div>
+            </div><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 text-center">
+      <a class="btn btn-secondary" [routerLink]="['/dashboard/new-product']" routerLinkActive="router-link-active">Add
+        New Product</a>
+    </div>
+  </div>
+</section>

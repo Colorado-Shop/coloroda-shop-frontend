@@ -1,0 +1,57 @@
+<!-- Page info -->
+<!-- <div class="page-top-info">
+  <div class="container">
+    <h4>Registeration</h4>
+    <div class="site-pagination">
+      <a>Dashboard</a> /
+      <a>Register</a>
+    </div>
+  </div>
+</div> -->
+<!-- Page info end -->
+
+
+<!-- Contact section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 contact-info">
+        <h3>Register A User</h3>
+        <!-- <p>1222 Walnut St, Suite 46 Denver, CO 80205</p> -->
+        <!-- <p>+1 (720) 235-8829</p> -->
+        <!-- <p>info@coloradoexoticshop.com</p> -->
+        <!-- <div class="contact-social">
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-behance"></i></a>
+        </div> -->
+        <form class="contact-form" (submit)="onSignup(signupForm)" #signupForm="ngForm">
+          <label>Email</label>
+          <input type="text" placeholder="Email" id="username" name="email" ngModel required email #email="ngModel">
+          <!-- <mat-error *ngIf="email.invalid">Please enter a valid email.</mat-error> -->
+          <div class="icon">
+            <span class="icon-placeholder zoominout"></span>
+          </div>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+            <div *ngIf="email.errors?.required"> Email is required.</div>
+            <div *ngIf="email.errors?.valid"> Please enter a valid email address.</div>
+          </div>
+          <br>
+          <label>Password</label>
+          <input type="password" placeholder="Password" id="password" name="password" ngModel required
+            #password="ngModel">
+          <div class="icon">
+            <span class="icon-placeholder zoominout"></span>
+          </div>
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+            <div *ngIf="password.errors?.required"> Password is required.</div>
+            <div *ngIf="password.errors?.valid"> Please enter a Password.</div>
+          </div>
+          <button class="site-btn" type="submit" [disabled]="!signupForm.valid || isLoading">SignUp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

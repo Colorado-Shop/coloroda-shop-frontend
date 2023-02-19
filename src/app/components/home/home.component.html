@@ -1,0 +1,221 @@
+<!-- Hero section -->
+<section class="hero-section">
+  <div class="hero-slider owl-carousel">
+    <div class="hs-item set-bg" data-setbg="assets/img/Untitled.png" style="background-color: blueviolet;">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-7 text-white">
+            <span style="color: black;">Stop COVID-19! By all respecting hygienic measures.</span>
+            <h2 style="color: black;">STOP COVID-19</h2>
+            <p style="color: black;">Stay home, stay safe and wash our hands regularly while respesting all hygienic
+              measures. We will deliver your package to your door at very affordable prices</p>
+            <a href="/products" class="site-btn sb-white">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="offer-card text-white">
+          <span>from</span>
+          <h2>$100</h2>
+          <p>SHOP NOW</p>
+        </div>
+      </div>
+    </div>
+    <div class="hs-item set-bg" data-setbg="assets/img/bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-7 text-white">
+            <span>Stop COVID-19! By all respecting hygienic measures.</span>
+            <h2>Cannabis Concentrates</h2>
+            <p>Shop for top grade canabis concentrates at Colorado Exotics. We will provide you with top quality
+              concentrates at very affordable prices</p>
+            <a href="/products" class="site-btn sb-white">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="offer-card text-white">
+          <span>from</span>
+          <h2>$100</h2>
+          <p>SHOP NOW</p>
+        </div>
+      </div>
+    </div>
+    <div class="hs-item set-bg" data-setbg="assets/img/bg-2.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-7 text-white">
+            <span>Stop COVID-19! By all respecting hygienic measures.</span>
+            <h2>Great Strains</h2>
+            <p>Here we come again with the best quality cannabis strains! Want cannabis products that can work against
+              stress, fatigue, Cancer, arthritis etc. You are at the right place</p>
+            <a href="/products" class="site-btn sb-line">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="offer-card text-white">
+          <span>from </span>
+          <h2>$100 </h2>
+          <p>SHOP NOW</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="slide-num-holder" id="snh-1"></div>
+  </div>
+</section>
+<!-- Hero section end -->
+
+
+
+<!-- Features section -->
+<section class="features-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="assets/img/icons/1.png" alt="#">
+          </div>
+          <h2>Fast Secure Payments</h2>
+        </div>
+      </div>
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="assets/img/icons/2.png" alt="#">
+          </div>
+          <h2>Premium Products</h2>
+        </div>
+      </div>
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="assets/img/icons/3.png" alt="#">
+          </div>
+          <h2>Free & fast Delivery</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Features section end -->
+
+
+<!-- letest product section -->
+<!-- <section class="top-letest-product-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>TRENDING PRODUCTS</h2>
+    </div>
+    <div class="product-slider owl-carousel">
+      <div class="product-item" *ngFor="let product of trending">
+        <div class="pi-pic">
+          <a href="/product/{{product.id}}"><img src={{product.photo}} alt={{product.name}}></a>
+          <div class="pi-links">
+            <a href="/product/{{product.id}}" class="add-card"><i class="flaticon-bag"></i><span>View
+                options</span></a>
+          </div>
+        </div>
+        <div class="pi-text">
+          <h6>${{product.prices[0].amount-20}} <br><del style="color: #f51167;">${{product.prices[0].amount}}</del></h6>
+          <p>{{product.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- letest product section end -->
+
+
+
+<!-- Product filter section -->
+<section class="product-filter-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>TRENDING PRODUCTS</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6" *ngFor="let product of trending">
+        <div class="product-item">
+          <div class="pi-pic">
+            <a href="/product/{{product.id}}"><img src={{product.photo}} alt={{product.name}}></a>
+            <div class="pi-links">
+              <a href="/product/{{product.id}}" class="add-card"><i class="flaticon-bag"></i><span>View
+                  options</span></a>
+            </div>
+          </div>
+          <div class="pi-text">
+            <h6>${{product.prices[0].amount-20}} <br><del style="color: #f51167;">${{product.prices[0].amount}}</del>
+            </h6>
+            <p>{{product.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pt-5">
+      <a href="/products" class="site-btn sb-line sb-dark">LOAD MORE</a>
+    </div>
+  </div>
+</section>
+<!-- Product filter section end -->
+
+<!-- Product filter section -->
+<section class="product-filter-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>TOP SELLING PRODUCTS</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6" *ngFor="let product of products">
+        <div class="product-item">
+          <div class="pi-pic">
+            <a href="/product/{{product.id}}"><img src={{product.photo}} alt={{product.name}}></a>
+            <div class="pi-links">
+              <a href="/product/{{product.id}}" class="add-card"><i class="flaticon-bag"></i><span>View
+                  options</span></a>
+            </div>
+          </div>
+          <div class="pi-text">
+            <h6>${{product.prices[0].amount-20}} <br><del style="color: #f51167;">${{product.prices[0].amount}}</del>
+            </h6>
+            <p>{{product.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pt-5">
+      <a href="/products" class="site-btn sb-line sb-dark">LOAD MORE</a>
+    </div>
+  </div>
+</section>
+<!-- Product filter section end -->
+
+
+<!-- Banner section -->
+<section class="banner-section">
+  <div class="container">
+    <div class="banner set-bg" data-setbg="assets/img/banner-bg.jpg">
+      <div class="tag-new">NEW</div>
+      <span>New Arrivals</span>
+      <h2>Premium Concentrates</h2>
+      <a href="/shop" class="site-btn">SHOP NOW</a>
+    </div>
+  </div>
+</section>
+<!-- Banner section end  -->
+
+<!-- Snap Pixel Code -->
+<script type='text/javascript'>
+  (function (e, t, n) {
+    if (e.snaptr) return; var a = e.snaptr = function () { a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments) };
+    a.queue = []; var s = 'script'; r = t.createElement(s); r.async = !0;
+    r.src = n; var u = t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r, u);
+  })(window, document,
+    'https://sc-static.net/scevent.min.js');
+
+  snaptr('init', 'b2ea7af3-4717-4163-924a-820c134d711b', {
+    'Phone_Number': '_hello_USER_EMAIL_'
+  });
+
+  snaptr('track', 'PAGE_VIEW');
+
+</script>
+<!-- End Snap Pixel Code -->

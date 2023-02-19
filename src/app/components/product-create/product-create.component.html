@@ -1,0 +1,105 @@
+<!-- Page info -->
+<div class="page-top-info">
+  <div class="container">
+    <h2 *ngIf="mode == 'create'">Add A New Product</h2>
+    <h2 *ngIf="mode == 'edit'">Update {{product?.name}}</h2>
+    <div class="site-pagination">
+      <a routerLink="/dashboard">All Products</a>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+
+<mat-card>
+  <!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#8fc424" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+  </ngx-spinner>
+  <form [formGroup]="form" (submit)="onSaveproduct()">
+    <div>
+      <button mat-raised-button style="background-color: #8fc424; color: white; float: right;" type="button"
+        (click)="filePicker.click()">Upload Image</button>
+      <input type="file" #filePicker (change)="onImagePicked($event)" width="300px">
+    </div>
+    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('photo').valid">
+      <img [src]="imagePreview" [alt]="product?.name">
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" placeholder="Pet's Name">
+      <mat-error *ngIf="form.get('name').errors?.required">Please enter the pet's name.</mat-error>
+      <mat-error *ngIf="form.get('name').errors?.minlength ">Name must be at least 3 characters long.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <input matInput type="text" formControlName="category" placeholder="Product category.">
+      <mat-error *ngIf="form.get('category').invalid">Please enter a product category.</mat-error>
+      <mat-hint style="font-style: oblique;">Hint: Strains | Concentrates | cbd oil etc...</mat-hint>
+    </mat-form-field>
+    <br><br>
+
+    <div fxLayout="column" fxflex="100%" class="form-standard">
+      <div formArrayName="prices" *ngFor="let setting of form.get('prices')?.controls; let i = index;">
+        <div [formGroupName]="i" fxLayout="column" fxFlex="100%" class="row">
+          <mat-form-field class="form-input" style="width: 30%; margin-right: 15px; margin-left: 13px;">
+            <input matInput formControlName="unit" name="unit" maxlength="255" placeholder="unit" required>
+          </mat-form-field><span></span>
+          <mat-form-field class="form-input" style="width: 30%; margin-right: 10px;">
+            <input type="number" matInput formControlName="amount" name="amount" maxlength="255" placeholder="price"
+              required>
+
+          </mat-form-field>
+
+          <mat-card-content class="mat-card-content">
+            <div class="form-standard">
+              <div fxFlex.gt-md="40" fxFlex.xs="40">
+                <div fxLayoutAlign="space-around stretch">
+                  <button type="button" mat-raised-button color="primary" (click)="deletePriceBlock(i)">Remove</button>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+
+        </div>
+      </div>
+    </div>
+    <mat-card-content class="mat-card-content">
+      <div fxLayout="row" fxLayoutAlign="start stretch" class="form-standard">
+        <div fxFlex.gt-md="100" fxFlex.xs="100">
+          <div fxLayoutAlign="space-around stretch">
+            <button type="button" mat-raised-button color="primary" (click)="addPriceBlock()">Add Price</button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product's Description.</mat-label>
+      <textarea matInput rows="6" formControlName="description1"
+        placeholder="Ex: They are gorgeous weeds srains to get super high."></textarea>
+      <mat-error *ngIf="form.get('description1').invalid">Please enter product description.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Additional information.</mat-label>
+      <textarea matInput rows="6" formControlName="description2" placeholder="Ex: Low CBD content."></textarea>
+      <mat-error *ngIf="form.get('description2').invalid">Please add at least one addtional product information.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- <div id="outer">
+      <div class="inner"><button type="submit" class="btn btn-secondary btn-lg" >Save</button></div>
+      <div class="inner"><button type="button" class="btn btn-secondary btn-lg" >Publish</button></div>
+      <div class="inner"><button class="msgBtnBack">Back</button></div>
+    </div> -->
+    <button *ngIf="mode == 'create'" type="submit" class="btn btn-secondary btn-lg"
+      style="float: inline-start; background-color: seagreen;">SAVE PRODUCT!</button>
+    <button *ngIf="mode == 'edit'" type="submit" class="btn btn-secondary btn-lg"
+      style="float: inline-start; background-color: seagreen;">SAVE UPDATES!</button>
+    <!-- <span class="spacer">|&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+    <a *ngIf="mode == 'edit'" type="button" class="btn btn-secondary btn-lg" style="float: right;"
+      href="/dashboard">CANCEL</a>
+    <a *ngIf="mode == 'create'" type="button" class="btn btn-secondary btn-lg" style="float: right;"
+      href="/dashboard">RETURN</a>
+  </form>
+</mat-card>

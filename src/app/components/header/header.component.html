@@ -1,0 +1,109 @@
+<header class="header-section">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 text-center text-lg-left">
+          <!-- logo -->
+          <a href="/" class="site-logo">
+            <img src="assets/img/logo.png" alt="">
+          </a>
+        </div>
+        <div class="col-xl-6 col-lg-5">
+          <form #ngSearch="ngForm" class="header-search-form" (ngSubmit)="search()">
+            <input type="text" placeholder="Search products ...." name="search" [(ngModel)]="searchString"
+              required="true">
+            <button type="submit"><i class="flaticon-search"></i></button>
+          </form>
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="user-panel">
+            <div class="up-item">
+              <div class="shopping-card">
+                <i class="flaticon-bag"></i>
+                <span>{{cartNumber}}</span>
+              </div>
+              <a href="/cart">Shopping Bag</a>
+            </div>
+            <div class="up-item">
+            </div>
+            <div class="up-item">
+              <div class="shopping-card">
+                <i class="flaticon-credit-card"></i>
+                <span>${{total}}</span>
+              </div>
+              <a href="/checkout">Checkout</a>
+            </div>
+            <div class="up-item">
+            </div>&nbsp;
+            <div class="up-item">
+              <a href="tel: +17194700917">
+                <i class="fa fa-phone" style="color: #f51167;"></i>
+                <span>+1 (719) 4700917</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="main-navbar">
+    <div class="container">
+      <!-- menu -->
+      <ul class="main-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Shop
+          </a>
+        </li>
+        <li><a href="#">Brands
+            <span class="new">New</span>
+          </a>
+          <ul class="sub-menu">
+            <li>
+              <a href="/category/muha-meds">muha-meds</a>
+            </li>
+            <li>
+              <a href="/category/rove">Rove</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/category/strain">Strains</a>
+          <!-- <ul class="sub-menu">
+            <li *ngFor="let product of strains">
+              <a href="/product/{{product.id}}">{{product.name}}</a>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="/category/concentrate">Concentrates
+            <span class="new">New</span>
+          </a>
+          <!-- <ul class="sub-menu">
+            <li *ngFor="let product of Concentrates">
+              <a href="/product/{{product.id}}">{{product.name}}</a>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="/category/vape-pen">Cartridges
+            <span class="new">New</span>
+          </a>
+          <!-- <ul class="sub-menu">
+            <li *ngFor="let product of vape_pens">
+              <a href="/product/{{product.id}}">{{product.name}}</a>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="/category/seed">Seeds
+          </a>
+          <!-- <ul class="sub-menu">
+            <li *ngFor="let product of seeds">
+              <a href="/product/{{product.id}}">{{product.name}}</a>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="/cart">Cart</a></li>
+        <li><a href="/checkout">Checkout</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- Header section end -->

@@ -1,0 +1,128 @@
+<!-- <div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_6.png');">
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-0 bread">Drugs Page {{currentPage}}</h1>
+        <p class="breadcrumbs"><span class="mr-2"><a href="../../../">Home</a></span> <span>Drugs</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ftco-section bg-light">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 col-lg-2 ftco-animate" *ngFor="let product of products">
+        <div class="product">
+          <a href="../../../product/{{product._id}}" class="img-prod"><img class="img-fluid"
+              src={{product.photo}} alt="{{product.name}}"></a>
+          <div class="text py-3 px-3">
+            <h3><a href="../../../product/{{product._id}}">{{product.name}}</a></h3>
+            <div class="d-flex">
+              <div class="pricing">
+                <p class="price"><span>${{product.prices[0].amount}}</span></p>
+              </div>
+              <div class="rating">
+                <p class="text-right">
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                </p>
+              </div>
+            </div>
+            <hr>
+            <p class="bottom-area d-flex">
+              <a href="../../../product/{{product._id}}" class="add-to-cart"><span>View Options <i
+                    class="ion-ios-add ml-1"></i></span></a>
+              <a href="../../../product/{{product._id}}" class="ml-auto"><span><i
+                    class="icon-shopping_cart"></i></span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col text-center">
+        <div class="block-27">
+          <ul>
+            <li><a *ngIf="currentPage == 1" aria-disabled="true">&lt;</a></li>
+            <li><a *ngIf="currentPage != 1" href='../../../products/page/{{currentPage-1}}' [disabled]="currentPage == 1">&lt;</a></li>
+            <li *ngFor="let page of getPagesArray()">
+                <a href='../../../products/page/{{page}}' *ngIf="page == currentPage" class="active">{{page}}</a>
+                <a href='../../../products/page/{{page}}' *ngIf="page != currentPage">{{page}}</a>
+            </li>
+            <li><a  *ngIf="currentPage == numberPages">&gt;</a></li>
+            <li><a  *ngIf="currentPage != numberPages" href='../../../products/page/{{currentPage--1}}'>&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Page info -->
+<div class="page-top-info">
+  <div class="container">
+    <h4>Products Page {{currentPage}}</h4>
+    <div class="site-pagination">
+      <a href="/">Home</a> /
+      <a>Shop</a>
+    </div>
+  </div>
+</div>
+<!-- Page info end -->
+
+
+<!-- Category section -->
+<section class="category-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6" *ngFor="let product of products">
+            <div class="product-item">
+              <div class="pi-pic">
+                <a href="/product/{{product._id}}"><img src={{product.photo}} alt={{product.name}}></a>
+                <div class="pi-links">
+                  <a href="/product/{{product._id}}" class="add-card"><i class="flaticon-bag"></i><span>View
+                      Options</span></a>
+                </div>
+              </div>
+              <div class="pi-text">
+                <h6>${{product.prices[0].amount-20}} <br><del style="color: #f51167;">${{product.prices[0].amount}}</del></h6>
+                <p>{{product.name}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12 text-center">
+        <nav aria-label="Page navigation" class="text-center">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" *ngIf="currentPage == 1" aria-disabled="true">&lt;</a></li>
+            <li class="page-item"><a class="page-link" *ngIf="currentPage != 1"
+                href='../../../products/page/{{currentPage-1}}' [disabled]="currentPage == 1">&lt;</a></li>
+            <li class="page-item" *ngFor="let page of getPagesArray()">
+              <a *ngIf="page == currentPage" class="page-link active">{{page}}</a>
+              <a class="page-link" href='../../../products/page/{{page}}' *ngIf="page != currentPage">{{page}}</a>
+            </li>
+            <li class="page-item"><a class="page-link" *ngIf="currentPage == numberPages">&gt;</a></li>
+            <li class="page-item"><a class="page-link" *ngIf="currentPage != numberPages"
+                href='../../../products/page/{{currentPage--1}}'>&gt;</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Category section end -->
+<section>
+  <div class="container">
+
+  </div>
+</section>

@@ -1,0 +1,9 @@
+{
+  "name": "Colorado Exotics Shop",
+  "short_name": "Cannabis Dispensary",
+  "theme_color": "#f51167",
+  "background_color": "#f51167",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}
