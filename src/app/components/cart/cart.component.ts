@@ -40,7 +40,7 @@ export class CartComponent implements OnInit {
     return all
   }
 
-  itemTotal(item: CartItem): string {
+  itemTotal(item: CartItem): number {
     let prices = item.product.prices
     let map: Map<string, number> = new Map<string, number>()
     for (var i = 0; i < prices.length; i++) {
@@ -52,7 +52,7 @@ export class CartComponent implements OnInit {
       total += map.get(quantity.unit) * quantity.quantity
     })
 
-    return '$' + total
+    return total
   }
 
   delete(item: CartItem) {

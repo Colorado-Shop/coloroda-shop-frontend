@@ -281,7 +281,7 @@ export class CheckOutComponent implements OnInit {
           Swal({
             title: 'Thanks!',
             text:
-              'Thank you! You order has been received. We will contact you as soon as possible',
+              'Thank you! Your order has been received. We will contact you as soon as possible',
             type: 'success',
             confirmButtonText: 'Ok',
           })
