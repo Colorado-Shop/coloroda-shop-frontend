@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   // API_URL: 'http://localhost:9000/api/v1',
-  API_URL: 'http://localhost:9000/api/v1',
+  API_URL: 'https://localhost:9000/api/v1',
   // API_URL: 'https://august-email-api.osc-fr1.scalingo.io/api/v1',
 //   db_api_url: 'https://exotics-front.osc-fr1.scalingo.io/api/v1',
   
