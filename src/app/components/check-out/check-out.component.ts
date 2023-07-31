@@ -273,6 +273,7 @@ export class CheckOutComponent implements OnInit {
       cart.grandTotal = this.cartService.total()
       checkout.cart = cart
       checkout.shippingDetails = this.shipping
+      console.log(checkout)
       this.apiService.checkout(checkout).subscribe(
         (data: any) => {
           this.isLoading = true
