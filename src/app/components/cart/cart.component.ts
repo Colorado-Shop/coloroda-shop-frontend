@@ -47,13 +47,15 @@ export class CartComponent implements OnInit {
       map.set(prices[i].unit, prices[i].amount)
     }
 
-    let total = 0
+    let total: number = 0
     item.quantities.forEach(quantity => {
       total = total + map.get(quantity.unit) * quantity.quantity
-      console.log(map.get(quantity.unit))
-      console.log(total)
+      console.log("unit: " + map.get(quantity.unit))
+      console.log("quantity: " + quantity.quantity)
+      console.log("total1: " + total)
+      console.log("inner compute: " + map.get(quantity.unit) * quantity.quantity)
     })
-    console.log(total)
+    console.log("total-final: " + total)
     console.log(map)
 
     return total
