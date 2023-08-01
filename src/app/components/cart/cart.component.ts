@@ -48,11 +48,14 @@ export class CartComponent implements OnInit {
     }
 
     let total = 0
-    item.quantities.forEach((quantity: Quantity) => {
+    item.quantities.forEach(quantity => {
       total = total + map.get(quantity.unit) * quantity.quantity
+      console.log(map.get(quantity.unit))
+      console.log(total)
     })
     console.log(total)
     console.log(map)
+
     return total
   }
 
