@@ -300,7 +300,7 @@ export const PRODUCTS: Product[] = [
     id: 'brass-knuckles',
     name: 'Brass Knuckles',
     photo: 'assets/img/products/brass-knuckles.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [
       { unit: '7 Napalm OG Cartridge', amount: 140 },
       { unit: '7 Abracadabra Cartridge', amount: 140 },
@@ -382,7 +382,7 @@ export const PRODUCTS: Product[] = [
     id: 'exotic-carts',
     name: 'Exotic Carts',
     photo: 'assets/img/products/exotic-carts.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [{ unit: '5 Cart', amount: 100 }],
     description1:
       'Buy best grade exortic carts here. Vape pens are a type of vaporizer designed specifically to vaporize cannabis distillates and oils. They are called pens because the design of the vape device closely resembles that of a traditional pen. A vape pen consists of two pieces: a battery and cartridgeVape pens are a type of vaporizer designed specifically to vaporize cannabis distillates and oils. They are called pens because the design of the vape device closely resembles that of a traditional pen. A vape pen consists of two pieces: a battery and cartridge',
@@ -813,7 +813,7 @@ export const PRODUCTS: Product[] = [
     id: 'vaping-1',
     name: 'Vape Pen 1',
     photo: 'assets/img/products/vaping-1.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [
       { unit: '500mg Sativa C-Cell Cartridge', amount: 40 },
       { unit: '500mg Indica C-Cell Cartridge', amount: 40 },
@@ -830,7 +830,7 @@ export const PRODUCTS: Product[] = [
     id: 'vaping-2',
     name: 'Vape Pen 2',
     photo: 'assets/img/products/vaping-2.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [
       { unit: '500mg Sativa C-Cell Cartridge', amount: 40 },
       { unit: '500mg Indica C-Cell Cartridge', amount: 40 },
@@ -938,7 +938,7 @@ export const PRODUCTS: Product[] = [
     id: 'chronic-carts',
     name: 'Chronic Carts',
     photo: 'assets/img/products/chronic-dank.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [{ unit: '5 Cart', amount: 120 }],
     description1:
       'Pre-filled THC Chronic Carts Vape Cartridges are filled with your liquid gold concentrate so you don’t have to worry about refilling. All you have to do is attach them to a rechargeable / reusable vape pen, which can also be purchased from your favorite online vape shop',
@@ -949,7 +949,7 @@ export const PRODUCTS: Product[] = [
     id: 'dank-vape',
     name: 'Dank Vapes',
     photo: 'assets/img/products/dankvapes.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [{ unit: '5 Cart', amount: 100 }],
     description1:
       'Dank-Vapes oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Dank-Vape is a translucent oil, anywhere from 75%-98% THC, and is activated by our specially-developed process to make it effective in oral and trans-dermal applications. Available in Syringe form, and with all-natural flavors and 100% Cannabis derived terpenes, Dank-Vape is setting the standard in medicinal cannabis',
@@ -971,7 +971,7 @@ export const PRODUCTS: Product[] = [
     id: 'kingpen',
     name: 'Kingpen Carts',
     photo: 'assets/img/products/kingpen.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [{ unit: '5 Cart', amount: 110 }],
     description1:
       'The world most awarded cannabis vape. Kingpen oil is made in our own state-of-the-art manufacturing lab. It is distilled 5 times producing a high quality product that passes strict qualitative and quantitative tests. No PG, VG, PEG or other additives. Just the highest quality vape cartridges for the highest quality high.',
@@ -1027,7 +1027,7 @@ export const PRODUCTS: Product[] = [
     id: 'propens',
     name: 'Propen Cartridges',
     photo: 'assets/img/products/propens.jpg',
-    category: 'vape-pen',
+    category: 'vape_pen',
     prices: [{ unit: '5 Cart', amount: 100 }],
     description1:
       'Dozens of companies are having great success with our ProPen CBD line-up, but if it doesn’t fit your campaign we can create something that fully accommodates. We cover vast array of CBD services from inception to the final retail sale. Regardless of your CBD requirements we’ve got you covered!',
@@ -1231,7 +1231,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-mojito',
     name: 'Muha Meds Mojito Cartridge',
     photo: 'assets/img/muha-meds/mogito.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Mojito Cartridge online. Muha Meds mojito cartridge oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds mojito cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. muha meds mojito cartridges are made with ceramic heating elements for superior heat control, muha meds mojito cartridges produces flavorful fragrant, smooth vapor for a richer experience. MuhaMeds mogito Vapes comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1242,7 +1242,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-cool-aid',
     name: 'Muha Meds Cool Aid Cartridge',
     photo: 'assets/img/muha-meds/cool-aid.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Cool Aid Cartridge online. Muha Meds Cool Aid cartridge oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Cool Aid cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. muha meds Cool Aid cartridges are made with ceramic heating elements for superior heat control, muha meds Cool Aid cartridges produces a flavorful fragrant, smooth vapor for a richer experience. MuhaMeds Cool Aid Vapes comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1253,7 +1253,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-nesquik',
     name: 'Muha Meds Nesquik Cartridge',
     photo: 'assets/img/muha-meds/nesquik.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Nesquik Cartridge online. Muha Meds Nesquik cartridge oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Nesquik cartridges CCELL are equipped with larger chambers and double the entry points, providing quicker effects. muha meds Nesquik cartridges are made with ceramic heating elements for superior heat control, muha meds Nesquik cartridges produces a flavorful fragrant, smooth vapor for a richer experience. The MuhaMeds Vape comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1264,7 +1264,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-orange-bang',
     name: 'Muha Meds Orange Bang Cartridge',
     photo: 'assets/img/muha-meds/orange-bang.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Orange Bang Cartridge online. Muha Meds Orange Bang cartridge oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Orange Bang cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. muha meds Orange Bang cartridges are made with ceramic heating elements for superior heat control, muha meds Orange Bang cartridges produces a flavorful fragrant, smooth vapor for a richer experience. The MuhaMeds Vape comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1275,7 +1275,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-pina-colada',
     name: 'Muha Meds Pina Colada Cartridge',
     photo: 'assets/img/muha-meds/pina-colada.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Pina Colada Cartridge online. Muha Meds Pina Colada cartridges oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Pina Colada cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. muha meds Pina colada cartridges are made with ceramic heating elements for superior heat control, muha meds Pina Colada cartridges produces a flavorful fragrant, smooth vapor for a richer experience. The MuhaMeds Vape comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1286,7 +1286,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-starburst',
     name: 'Muha Meds Starburst Cartridge',
     photo: 'assets/img/muha-meds/starburst.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Starburst Cartridge online. Muha Meds Starburst cartridges oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Starburst starburst cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. Muha Meds Starburst Cartridges are made with ceramic heating elements for superior heat control, Muha Meds Starburst Cartridges produces a flavorful fragrant, smooth vapor for a richer experience. The MuhaMeds Starburst Vape comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1297,7 +1297,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-strawberry-cough',
     name: 'Muha Meds Strawberry Cough Cartridge',
     photo: 'assets/img/muha-meds/strawberry-cough.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Strawberry Cough Cartridge online. Muha Meds Strawberry Cough cartridges oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Strawberry Cough cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. Muha meds Strawberry Cough cartridges are Made with ceramic heating elements for superior heat control, muha meds Strawberry Cough cartridges produces a flavorful fragrant, smooth vapor for a richer experience. The MuhaMeds Vape comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1308,7 +1308,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-watermelon',
     name: 'Muha Meds Watermelon Cartridge',
     photo: 'assets/img/muha-meds/watermelon.jpg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Watermelon Cartridge online. Muha Meds Watermelon is an 80% indica strain with a high THC content providing a relaxing effect and useful for appetite stimulant and also act as a sleeping agent. muha meds Watermelon cartridge is also reported to provide energetic, uplifting and euphoric feelings. The muha meds watermelon cartridge flavor as it name suggests, is fruity, sweet and earthy with a high yield and potency requiring 55 to 60 days flowering time.',
@@ -1319,7 +1319,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-wifi-og',
     name: 'Muha Meds Wifi OG Cartridge',
     photo: 'assets/img/muha-meds/wifi-og.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [{ unit: 'Full Gram Cartridge', amount: 50 }],
     description1:
       'Buy Muha Meds Wifi OG Cartridge online. Muha Meds Wifi OG cartridges oil is a 100% solvent-free cannabis concentrate, unmatched in its potency, purity, and flavor. Muha Meds Wifi OG cartridges latest CCELL are equipped with larger chambers and double the entry points, providing quicker effects. muha meds Wifi OG cartridges are made with ceramic heating elements for superior heat control, muha meds Wifi OG cartridges produces a flavorful fragrant, smooth vapor for a richer experience. The MuhaMeds Vape comes in both 500mg and 1g cartridges, which last ~150 and ~300 puffs each. Once finished, simply disconnect from the battery unit and dispose. Each 4-second activation yields ~3.5mg of cannabis oil.',
@@ -1330,7 +1330,7 @@ export const PRODUCTS: Product[] = [
     id: 'muha-meds-carts',
     name: 'Muha Meds Live Resin Cartridge',
     photo: 'assets/img/muha-meds/starburst.jpeg',
-    category: 'muha-meds',
+    category: 'muha_meds',
     prices: [
       { unit: '1 Cool Aid Live Resin Cartridge', amount: 45 },
       { unit: '1 Mogito Live Resin Cartridge', amount: 25 },

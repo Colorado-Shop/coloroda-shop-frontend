@@ -33,6 +33,7 @@ export class ContactComponent implements OnInit {
         text: 'Thank you! You message has been received. We will contact you as soon as possible',
         type: 'success',
         confirmButtonText: 'Ok',
+        confirmButtonColor: '#f51167',
       })
       this.contact = new Contact();
       this.isLoading = false;
@@ -45,6 +46,7 @@ export class ContactComponent implements OnInit {
           text: 'Unable to send message. Make sure you are connected to the internet',
           type: 'warning',
           confirmButtonText: 'Ok got it!',
+          confirmButtonColor: '#f51167',
         })
         this.buttonMsg = "Send Message";
       });

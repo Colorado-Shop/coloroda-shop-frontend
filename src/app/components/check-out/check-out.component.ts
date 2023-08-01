@@ -285,6 +285,7 @@ export class CheckOutComponent implements OnInit {
               'Thank you! Your order has been received. We will contact you as soon as possible',
             type: 'success',
             confirmButtonText: 'Ok',
+            confirmButtonColor: '#f51167'
           })
           this.isLoading = false
           this.buttonMsg = 'Place Order'
@@ -297,6 +298,7 @@ export class CheckOutComponent implements OnInit {
               'Unable to place order. Make sure you are connected to the internet',
             type: 'warning',
             confirmButtonText: 'Ok got it!',
+            confirmButtonColor: '#f51167',
           })
           this.buttonMsg = 'Place Order'
         },

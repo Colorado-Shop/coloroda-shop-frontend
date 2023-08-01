@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
     // this.concentrates = this.getCategoryArray('concentrate')
     // this.strains = this.getCategoryArray('strain')
     // this.seeds = this.getCategoryArray('seed')
-    // this.vape_pens = this.getCategoryArray('vape-pen')
+    // this.vape_pens = this.getCategoryArray('vape_pen')
   }
 
   printQuantity(item: CartItem) {
